@@ -38,7 +38,7 @@ const WebConsulting = () => {
         </button>
       </div>
 
-
+         {/* Get Template btn  */}
       <div className=" mt-6" style={{display:"block", position:"relative", top:"80px", left:"570px", overflow:"hidden"}}>
         <button className="bg-[#D9F273] hover:bg-brandGreen h-10 flex items-center gap-2 px-9 rounded-full border transition-colors duration-300">
           Get Template

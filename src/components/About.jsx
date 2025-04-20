@@ -1,13 +1,51 @@
+import about from "../assets/About-us.png";
+import arrow from "../assets/arrow.png";
+
 const About = () => {
-    return (
-      <section id="about" className="py-20 bg-gray-100">
-        <h2 className="text-3xl text-center font-bold">About</h2>
-        <p className="text-center mt-4 max-w-xl mx-auto">
-          Welcome to the About section of our awesome landing page!
+  return (
+    <section
+      id="about"
+      className=" mt-16 ml-6 mr-6"
+      style={{ display: "flex", justifyContent: "space-between" }}
+    >
+      <div>
+        <button
+          style={{
+            backgroundColor: "#E1E1E1",
+            borderRadius: "70px",
+            paddingTop: "5px",
+            paddingBottom: "5px",
+            fontSize: "17px",
+          }}
+          className="px-4"
+        >
+          About us
+        </button>
+        <br />
+        <h3 className="text-[2.5rem] font-bold mt-4 leading-snug">
+          Transforming <pre /> Business with Web3 <pre />
+          Technology
+        </h3>
+        <br />
+        <p>
+          At Spark, we specialize in providing cutting-edge Web3 consulting{" "}
+          <pre /> services to help businesses navigate the complexities of{" "}
+          <pre />
+          decentralized technologies.
         </p>
-      </section>
-    );
-  };
-  
-  export default About;
-  
+              <div className="flex  mt-6">
+                <button className="bg-[#D9F273] hover:bg-brandGreen h-10 flex items-center gap-2 px-4 rounded-full border transition-colors duration-300">
+                  Contact us
+                  <img src={arrow} alt="arrow" className="h-5" />
+                </button>
+              </div>
+      </div>
+
+      <div>
+        <img src={about} className="h-96" />
+      </div>
+    </section>
+  );
+};
+
+export default About;
