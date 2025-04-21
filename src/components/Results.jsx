@@ -3,7 +3,7 @@ import arrow from "../assets/arrow.png";
 
 const Results = () => {
     return (
-       <div className="flex flex-col items-center justify-center -mt-[260px] px-4 text-center">
+       <div className="flex flex-col items-center justify-center -mt-[260px] px-4 text-center" id="results">
            {/* Button */}
            <button
              style={{

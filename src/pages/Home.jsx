@@ -10,6 +10,7 @@ import CaseStudies from "../components/CaseStudies";
 import Team from "../components/Team";
 import ClientSay from "../components/ClientSay";
 import ContactUs from "../components/ContactUs";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
       <ClientSay />
       <FAQ />
       <ContactUs />
+      <Footer />
     </div>
   );
 };

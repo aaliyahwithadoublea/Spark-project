@@ -1,0 +1,43 @@
+@media (min-width: 767px) and (max-width: 900px) {
+    .left-section {
+        /* border: 2px solid red; */
+        /* left: -420px; */
+        /* bottom:-900px; */
+        height: auto;
+    }
+
+    .left-image{
+       /* border: 2px solid green;  */
+       height: 12rem;
+       
+    }
+
+    .right-section{
+        /* border: 2px solid rgb(98, 248, 39); */
+        /* right: 1300px; */
+        /* margin-right: 20rem; */
+        /* left: -500px; */
+
+    }
+
+   
+  }
+
+
+  @media (max-width: 767px){
+
+      .smaller-screen{
+    margin-top: 1rem;
+
+      }
+
+      .template{
+        overflow: hidden;
+      }
+
+      .right-image{
+        height: 12rem;
+        right: 3px;
+        
+    }
+  }

@@ -6,14 +6,18 @@ import accordionData from "../../utils/accordion";
 import dropdownArrow from "../assets/dropdown-arrow.jpeg";
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null); // ✅ You need this state inside the component
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center mt-[100px] px-4 text-center">
+    <div
+      className="flex flex-col items-center justify-center mt-[100px] px-4 text-center relative w-screen"
+      id="faq"
+      style={{ marginBottom: "37rem" }}
+    >
       {/* Button */}
       <button
         style={{
@@ -37,7 +41,7 @@ const FAQ = () => {
       <p className="font-light mt-4">Find the answers here.</p>
 
       {/* Accordion Section */}
-      <div className="max-w-3xl mx-auto mt-20">
+      <div className="max-w-3xl mx-auto mt-20 relative z-30">
         {accordionData.map((item, index) => (
           <div key={index} className="border-b border-gray-300 py-4">
             <button
@@ -68,26 +72,55 @@ const FAQ = () => {
 
       {/* Left Image */}
       <section
+        className="absolute top-0 left-0"
         style={{
-          display: "block",
-          position: "relative",
-          right: "675px",
-          top: "-470px",
+          padding: 0,
+          margin: 0,
+          width: "auto",
+          height: "auto",
+          overflow: "hidden",
+          zIndex: 10, // Set lower z-index for the image, it will be covered by accordion
         }}
       >
-        <img src={left} className="h-72" alt="left" />
+        <img
+          src={left}
+          alt="left"
+          style={{
+            display: "block",
+            position: "relative",
+            left: -210,
+            top: 0,
+            height: "18rem",
+            width: "18rem",
+          }}
+        />
       </section>
 
       {/* Right Image */}
       <section
         style={{
-          display: "block",
-          position: "relative",
-          left: "680px",
-          top: "-700px",
+          padding: 0,
+          margin: 0,
+          width: "auto",
+          height: "auto",
+          overflow: "hidden",
+          zIndex: 10, // Set lower z-index for the image, it will be covered by accordion
         }}
+        className="absolute bottom-0 right-0"
       >
-        <img src={right} className="h-72" alt="right" />
+        <img
+          src={right}
+          className="h-72 right-image"
+          alt="right"
+          style={{
+            display: "block",
+            position: "relative",
+            left: 200,
+            top: 0,
+            height: "18rem",
+            width: "18rem",
+          }}
+        />
       </section>
     </div>
   );

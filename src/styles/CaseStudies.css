@@ -1,0 +1,36 @@
+@media (max-width: 767px) {
+  .smaller-screen {
+    margin-top: 1rem;
+  }
+
+  .big {
+    font-size: 2rem;
+  }
+
+  .small {
+    font-size: 0.8rem;
+  }
+  .boxes {
+    max-width: 17rem;
+    /* margin-left: -40px; */
+    /* margin: 0 auto; */
+    order: 2px solid green;
+  }
+
+  .little {
+    right: 30px;
+  }
+
+  .btn {
+    margin-bottom: -60px;
+    margin-left: -5rem;
+  }
+
+  .begin {
+    margin-top: 5rem;
+  }
+
+  .front {
+    margin-left: -20px;
+  }
+}

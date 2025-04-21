@@ -3,7 +3,7 @@ import button from "../assets/button.png";
 
 const ContactUs = () => {
     return (
-        <div style={{backgroundColor: "#3A3D32"}} className="flex flex-col items-center justify-center -mt-[600px] px-4 text-center h-96 w-auto rounded-2xl">
+        <div style={{backgroundColor: "#3A3D32"}} className="flex flex-col items-center justify-center -mt-[500px] px-4 text-center h-96 w-auto rounded-2xl">
           <button
                     style={{
                       backgroundColor: "#E1E1E1",
