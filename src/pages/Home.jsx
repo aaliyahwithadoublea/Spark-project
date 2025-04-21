@@ -5,6 +5,9 @@ import Results from "../components/Results";
 import FAQ from "../components/FAQ";
 import WebConsulting from "../components/WebConsulting";
 import Innovators from "../components/innovators";
+import Experience from "../components/experience";
+import CaseStudies from "../components/CaseStudies";
+import Team from "../components/Team";
 
 const Home = () => {
   return (
@@ -15,8 +18,11 @@ const Home = () => {
       <WebConsulting />
       <Innovators />
       <About />
+      <Experience />
       <Services />
+      <CaseStudies />
       <Results />
+      <Team />
       <FAQ />
     </div>
   );

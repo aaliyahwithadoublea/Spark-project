@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className=" mt-16 ml-6 mr-6"
+      className=" mt-28 ml-6 mr-6"
       style={{ display: "flex", justifyContent: "space-between" }}
     >
       <div>
