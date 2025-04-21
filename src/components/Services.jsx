@@ -4,26 +4,49 @@ import exp3 from "../assets/Experience-3rd.png";
 import exp4 from "../assets/Experience-4th.png";
 import arrow from "../assets/arrow.png";
 import { sectionsData } from "../../utils/data";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-center justify-center mt-28 px-5 text-center bg-[#F8F8F6] " style={{width:"100%"}} id="services">
-      {/* Button */}
-      <button className="bg-[#E1E1E1] rounded-full px-4 py-1 text-sm md:text-base mt-2">
+    <div
+      className="flex flex-col items-center justify-center mt-28 px-5 text-center bg-[#F8F8F6]"
+      style={{ width: "100%" }}
+      id="services"
+    >
+      {/* Animated Button */}
+      <motion.button
+        className="bg-[#E1E1E1] rounded-full px-4 py-1 text-sm md:text-base mt-2"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
         Services
-      </button>
+      </motion.button>
 
-      {/* Heading */}
-      <h3 className="text-[1.8rem] md:text-[2.3rem] font-semibold mt-4 leading-snug">
+      {/* Animated Heading */}
+      <motion.h3
+        className="text-[1.8rem] md:text-[2.3rem] font-semibold mt-4 leading-snug"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
         Ways How we can Help you
-      </h3>
+      </motion.h3>
 
-      {/* Paragraph */}
-      <p className="font-light mt-4 text-[16px] md:text-[18px] max-w-xl">
+      {/* Animated Paragraph */}
+      <motion.p
+        className="font-light mt-4 text-[16px] md:text-[18px] max-w-xl"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
         Tailored solutions for your decentralized journey.
-      </p>
+      </motion.p>
 
-      {/* Service Cards */}
+      {/* Service Cards (No animation here) */}
       <section className="w-full px-4 md:px-12 lg:px-24 py-10 text-left">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {sectionsData.map((item, index) => (
@@ -41,12 +64,22 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Button */}
+      {/* Animated CTA Button */}
       <div className="flex items-center justify-center mt-6">
-        <button className="bg-[#D9F273] hover:bg-brandGreen text-sm md:text-base h-10 flex items-center gap-2 px-6 py-2 rounded-full border transition-colors duration-300">
+        <motion.button
+          className="bg-[#D9F273] hover:bg-brandGreen text-sm md:text-base h-10 flex items-center gap-2 px-6 py-2 rounded-full border transition-colors duration-300"
+          initial={{ rotate: -180, opacity: 0 }}
+          whileInView={{ rotate: 0, opacity: 1 }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+            delay: 0.2,
+          }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
           Contact us
           <img src={arrow} alt="arrow" className="h-4 md:h-5" />
-        </button>
+        </motion.button>
       </div>
 
       <div className="h-20 md:h-28" /> {/* Spacer */}

@@ -1,8 +1,9 @@
 import React from "react";
-import left from "../assets/Left-Img.png";
-import right from "../assets/Right-Img.png";
+import left from "../assets/Left-Img.webp";
+import right from "../assets/Right-Img.webp";
 import arrow from "../assets/arrow.png";
 import "../styles/WebConsulting.css";
+import { motion } from "framer-motion";
 
 const WebConsulting = () => {
   return (
@@ -23,18 +24,17 @@ const WebConsulting = () => {
       >
         Web 3 consulting
       </button>
-
       {/* Heading */}
       <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mt-4 leading-snug text-center">
         Revolutionize Your Operations <br /> with our Web3 Expertise
-      </h3> <br />
-
+      </h3>{" "}
+      <br />
       {/* Paragraph */}
       <p className="font-light mt-4">
         Comprehensive solutions for blockchain integration, <br /> smart
         contracts, and more.
-      </p> <br />
-
+      </p>{" "}
+      <br />
       {/* CTA Button */}
       <div className="flex items-center justify-center mt-6">
         <button className="bg-[#D9F273] hover:bg-brandGreen h-10 flex items-center gap-2 px-4 rounded-full border transition-colors duration-300">
@@ -42,23 +42,8 @@ const WebConsulting = () => {
           <img src={arrow} alt="arrow" className="h-5" />
         </button>
       </div>
-
-      {/* Get Template btn  */}
-      {/* <div
-        className="absolute -bottom-6 -right-4 mt-14 overflow-hidden template"
-        style={{
-          display: "block",
-          overflow: "hidden",
-          marginLeft: "auto",
-        }}
-      >
-        <button className="bg-[#D9F273] hover:bg-brandGreen h-10 flex items-center gap-2 px-9 rounded-full border transition-colors duration-300" style={{ borderRight: "none", overflow: "hidden", clipPath: "inset(0 20% 0 0)" }}>                  
-          Get Template
-        </button>
-      </div> */}
-
       {/* Left Image */}
-      <section
+      <motion.section
         className="absolute top-0 left-0"
         style={{
           padding: 0,
@@ -67,6 +52,10 @@ const WebConsulting = () => {
           height: "auto",
           overflow: "hidden",
         }}
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <img
           src={left}
@@ -81,19 +70,21 @@ const WebConsulting = () => {
             width: "18rem",
           }}
         />
-      </section>
-
+      </motion.section>
       {/* Right Image  */}
-      <section
+      <motion.section
         style={{
           padding: 0,
           margin: 0,
           width: "auto",
           height: "auto",
           overflow: "hidden",
-          
         }}
         className="absolute bottom-0 -right-4 right-image"
+        initial={{ x: 200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <img
           src={right}
@@ -109,7 +100,7 @@ const WebConsulting = () => {
             zIndex: -1,
           }}
         />
-      </section>
+      </motion.section>
     </div>
   );
 };

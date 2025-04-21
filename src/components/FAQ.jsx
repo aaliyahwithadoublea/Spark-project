@@ -4,6 +4,7 @@ import right from "../assets/Right-Img.png";
 import arrow from "../assets/arrow.png";
 import accordionData from "../../utils/accordion";
 import dropdownArrow from "../assets/dropdown-arrow.jpeg";
+import { motion } from "framer-motion";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -71,7 +72,7 @@ const FAQ = () => {
       </div>
 
       {/* Left Image */}
-      <section
+      <motion.section
         className="absolute top-0 left-0"
         style={{
           padding: 0,
@@ -79,8 +80,12 @@ const FAQ = () => {
           width: "auto",
           height: "auto",
           overflow: "hidden",
-          zIndex: 10, // Set lower z-index for the image, it will be covered by accordion
+          zIndex: 10,
         }}
+        initial={{ x: -200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <img
           src={left}
@@ -94,19 +99,23 @@ const FAQ = () => {
             width: "18rem",
           }}
         />
-      </section>
+      </motion.section>
 
       {/* Right Image */}
-      <section
+      <motion.section
         style={{
           padding: 0,
           margin: 0,
           width: "auto",
           height: "auto",
           overflow: "hidden",
-          zIndex: 10, // Set lower z-index for the image, it will be covered by accordion
+          zIndex: 10,
         }}
         className="absolute bottom-0 right-0"
+        initial={{ x: 200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 3 }}
+        viewport={{ once: false, amount: 0.2 }}
       >
         <img
           src={right}
@@ -121,7 +130,7 @@ const FAQ = () => {
             width: "18rem",
           }}
         />
-      </section>
+      </motion.section>
     </div>
   );
 };

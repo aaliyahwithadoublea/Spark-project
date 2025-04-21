@@ -27,16 +27,24 @@ const Footer = () => {
       {/* Navigation Links */}
       <ul className="flex gap-8 px-4 mt-5 font-light text-sm list-none flex-wrap">
         <li>
-          <a href="#about" className="hover:text-[#AED317]">About</a>
+          <a href="#about" className="hover:text-[#AED317]">
+            About
+          </a>
         </li>
         <li>
-          <a href="#services" className="hover:text-[#AED317]">Services</a>
+          <a href="#services" className="hover:text-[#AED317]">
+            Services
+          </a>
         </li>
         <li>
-          <a href="#results" className="hover:text-[#AED317]">Results</a>
+          <a href="#results" className="hover:text-[#AED317]">
+            Results
+          </a>
         </li>
         <li>
-          <a href="#faq" className="hover:text-[#AED317]">FAQ</a>
+          <a href="#faq" className="hover:text-[#AED317]">
+            FAQ
+          </a>
         </li>
       </ul>
 

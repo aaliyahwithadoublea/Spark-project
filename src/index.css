@@ -8,6 +8,6 @@ html {
 
 body{
   overflow-x: hidden;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
   margin: 0 auto;
 }

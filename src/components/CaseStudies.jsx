@@ -3,6 +3,7 @@ import arrow from "../assets/arrow.png";
 import right from "../assets/Right-Img.png";
 import { caseData } from "../../utils/case";
 import "../styles/CaseStudies.css";
+import { motion } from "framer-motion";
 
 const CaseStudies = () => {
   return (
@@ -25,18 +26,40 @@ const CaseStudies = () => {
         >
           Case Studies
         </button>
-        <h3 className="text-[2.5rem] font-bold mt-4 leading-snug big">
-          Proven Impact with <pre /> our Web3 Solutions
-        </h3>
-        <p className="mt-4 small">
+        <motion.h3
+          className="text-[2.5rem] font-bold mt-4 leading-snug big"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
+          Proven Impact with <br /> our Web3 Solutions
+        </motion.h3>
+        <motion.p
+          className="mt-4 small"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          viewport={{ once: false, amount: 0.2 }}
+        >
           Discover how we've helped businesses scale
-          <pre /> and innovate with Web3 technology.
-        </p>
+          <br /> and innovate with Web3 technology.
+        </motion.p>
         <div className="flex justify-center md:justify-start mt-6">
-          <button className="bg-[#D9F273] hover:bg-brandGreen h-10 flex items-center gap-2 px-4 rounded-full border transition-colors duration-300 btn">
+          <motion.button
+            className="bg-[#D9F273] hover:bg-brandGreen h-10 flex items-center gap-2 px-4 rounded-full border transition-colors duration-300 btn"
+            initial={{ rotate: -180, opacity: 0 }}
+            whileInView={{ rotate: 0, opacity: 1 }}
+            transition={{
+              duration: 1,
+              ease: "easeOut",
+              delay: 0.2,
+            }}
+            viewport={{ once: false, amount: 0.2 }}
+          >
             Contact us
             <img src={arrow} alt="arrow" className="h-5" />
-          </button>
+          </motion.button>
         </div>
       </div>
 
@@ -71,9 +94,19 @@ const CaseStudies = () => {
       <div className="w-full">
         <div className="flex flex-col gap-6 w-11/12 max-w-xl front">
           {caseData.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="bg-[#F7F7F7]/70 backdrop-blur-sm p-6 rounded-xl shadow-md border "
+              initial={{
+                opacity: 0,
+                y: index % 2 === 0 ? 100 : -100,
+              }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 1,
+                delay: 0.5 + index * 0.2,
+              }}
+              viewport={{ once: false, amount: 0.2 }}
             >
               <img
                 src={item.img}
@@ -82,7 +115,7 @@ const CaseStudies = () => {
               />
               <h3 className="text-lg font-semibold mb-2">{item.header}</h3>
               <p className="font-light whitespace-pre-line">{item.content}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

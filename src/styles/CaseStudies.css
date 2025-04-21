@@ -12,9 +12,7 @@
   }
   .boxes {
     max-width: 17rem;
-    /* margin-left: -40px; */
-    /* margin: 0 auto; */
-    order: 2px solid green;
+
   }
 
   .little {

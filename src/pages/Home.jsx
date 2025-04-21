@@ -16,7 +16,6 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      {/* Spacer to avoid overlap with fixed navbar */}
       <div className="h-20"></div>
       <WebConsulting />
       <Innovators />
