@@ -1,7 +1,7 @@
-import React from 'react';
-import left from '../assets/Left-Img.png';
-import right from '../assets/Right-Img.png';
-import arrow from '../assets/arrow.png';
+import React from "react";
+import left from "../assets/Left-Img.png";
+import right from "../assets/Right-Img.png";
+import arrow from "../assets/arrow.png";
 
 const WebConsulting = () => {
   return (
@@ -9,11 +9,11 @@ const WebConsulting = () => {
       {/* Button */}
       <button
         style={{
-          backgroundColor: '#E1E1E1',
-          borderRadius: '70px',
-          paddingTop: '5px',
-          paddingBottom: '5px',
-          fontSize: '17px',
+          backgroundColor: "#E1E1E1",
+          borderRadius: "70px",
+          paddingTop: "5px",
+          paddingBottom: "5px",
+          fontSize: "17px",
         }}
         className="px-4"
       >
@@ -27,7 +27,8 @@ const WebConsulting = () => {
 
       {/* Paragraph */}
       <p className="font-light mt-4">
-        Comprehensive solutions for blockchain integration, <br /> smart contracts, and more.
+        Comprehensive solutions for blockchain integration, <br /> smart
+        contracts, and more.
       </p>
 
       {/* CTA Button */}
@@ -38,8 +39,17 @@ const WebConsulting = () => {
         </button>
       </div>
 
-         {/* Get Template btn  */}
-      <div className=" mt-6" style={{display:"block", position:"relative", top:"80px", left:"570px", overflow:"hidden"}}>
+      {/* Get Template btn  */}
+      <div
+        className=" mt-6"
+        style={{
+          display: "block",
+          position: "relative",
+          top: "80px",
+          left: "570px",
+          overflow: "hidden",
+        }}
+      >
         <button className="bg-[#D9F273] hover:bg-brandGreen h-10 flex items-center gap-2 px-9 rounded-full border transition-colors duration-300">
           Get Template
         </button>
@@ -48,10 +58,10 @@ const WebConsulting = () => {
       {/* Left Image */}
       <section
         style={{
-          display: 'block',
-          position: 'relative',
-          right: '675px',
-          top: '-470px',
+          display: "block",
+          position: "relative",
+          right: "675px",
+          top: "-470px",
         }}
       >
         <img src={left} className="h-72" alt="left" />
@@ -60,10 +70,10 @@ const WebConsulting = () => {
       {/* Right Image  */}
       <section
         style={{
-          display: 'block',
-          position: 'relative',
-          left: '680px',
-          top: '-700px',
+          display: "block",
+          position: "relative",
+          left: "680px",
+          top: "-700px",
         }}
       >
         <img src={right} className="h-72" alt="right" />

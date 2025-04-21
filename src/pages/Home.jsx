@@ -8,6 +8,8 @@ import Innovators from "../components/innovators";
 import Experience from "../components/experience";
 import CaseStudies from "../components/CaseStudies";
 import Team from "../components/Team";
+import ClientSay from "../components/ClientSay";
+import ContactUs from "../components/ContactUs";
 
 const Home = () => {
   return (
@@ -23,7 +25,9 @@ const Home = () => {
       <CaseStudies />
       <Results />
       <Team />
+      <ClientSay />
       <FAQ />
+      <ContactUs />
     </div>
   );
 };
