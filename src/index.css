@@ -10,4 +10,5 @@ body{
   overflow-x: hidden;
   /* border: 2px solid orange; */
   margin: 0 auto;
+  background-color: transparent;
 }

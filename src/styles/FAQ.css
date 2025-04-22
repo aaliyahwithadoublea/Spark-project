@@ -1,0 +1,14 @@
+@media (max-width: 767px){
+
+    .right-image{
+      height: 12rem;
+      /* right: 10px;
+       */
+       left: -2px;
+      border: 2px solid rgb(86, 226, 22);
+      width: 20px;
+      /* background-color: yellow; */
+      right: 20px;
+      
+  }
+}

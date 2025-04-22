@@ -5,6 +5,7 @@ import arrow from "../assets/arrow.png";
 import accordionData from "../../utils/accordion";
 import dropdownArrow from "../assets/dropdown-arrow.jpeg";
 import { motion } from "framer-motion";
+import "../styles/FAQ.css";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -108,10 +109,10 @@ const FAQ = () => {
           margin: 0,
           width: "auto",
           height: "auto",
-          overflow: "hidden",
+          // overflow: "hidden",
           zIndex: 10,
         }}
-        className="absolute bottom-0 right-0"
+        className="absolute bottom-0 right-0 "
         initial={{ x: 200, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 3 }}
@@ -128,6 +129,7 @@ const FAQ = () => {
             top: 0,
             height: "18rem",
             width: "18rem",
+            // border:"2px solid orange"
           }}
         />
       </motion.section>

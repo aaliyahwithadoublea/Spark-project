@@ -14,7 +14,7 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{border:"2px solid red"}}>
       <Navbar />
       <div className="h-20"></div>
       <WebConsulting />
